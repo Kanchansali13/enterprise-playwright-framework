@@ -1,22 +1,20 @@
 package com.kanchansali.tests;
 
+import com.kanchansali.base.BaseTest;
+import com.kanchansali.config.ConfigReader;
 import com.kanchansali.factory.BrowserFactory;
 import com.microsoft.playwright.*;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class BrowserLaunchTest {
-
+public class BrowserLaunchTest extends BaseTest {
     @Test
     public void launchBrowser() {
 
-        Browser browser = BrowserFactory.createBrowser();
-
-        Page page = browser.newPage();
-
-        page.navigate("https://www.google.com");
+        page.navigate(ConfigReader.get("base.url"));
 
         System.out.println(page.title());
 
-        browser.close();
+        Assert.assertTrue(page.title().contains("Playwright"));
     }
 }
