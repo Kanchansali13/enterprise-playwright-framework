@@ -15,12 +15,9 @@ public class LoginPage extends BasePage {
     public InventoryPage login(String username, String password) {
 
         type(USERNAME, username);
-
         type(PASSWORD, password);
-
         click(LOGIN_BUTTON);
 
         return new InventoryPage(page);
     }
-
 }
