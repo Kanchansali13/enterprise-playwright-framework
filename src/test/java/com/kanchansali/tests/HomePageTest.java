@@ -1,21 +1,20 @@
 package com.kanchansali.tests;
 
 import com.kanchansali.base.BaseTest;
+import com.kanchansali.config.ConfigReader;
 import com.kanchansali.pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class BrowserLaunchTest extends BaseTest {
+public class HomePageTest extends BaseTest {
+
     @Test
     public void launchBrowser() {
 
-
-
-
         LoginPage loginPage = new LoginPage(page);
 
-        //loginPage.open();
+        page.navigate(ConfigReader.get("base.url"));
 
-        Assert.assertTrue(page.title().contains("Playwright"));
+        Assert.assertEquals(page.title(), "Swag Labs");
     }
 }
