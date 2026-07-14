@@ -13,7 +13,9 @@ public class InventoryPage extends BasePage {
 
     public boolean isInventoryDisplayed() {
 
-        return locator(InventoryPageLocators.INVENTORY_CONTAINER).isVisible();
+        return locator(InventoryPageLocators.PAGE_TITLE)
+                .textContent()
+                .equals("Products");
 
     }
 
@@ -39,11 +41,8 @@ public class InventoryPage extends BasePage {
 
             return 0;
 
-        return Integer.parseInt(
-
-                locator(InventoryPageLocators.CART_BADGE)
-
-                        .textContent());
+        String cartCount = locator(InventoryPageLocators.CART_BADGE).textContent();
+        return Integer.parseInt(cartCount.trim());
 
     }
 

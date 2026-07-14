@@ -2,6 +2,8 @@ package com.kanchansali.constants;
 
 public class InventoryPageLocators {
 
+    public static final String PAGE_TITLE = ".title";
+
     public static final String INVENTORY_CONTAINER = "#inventory_container";
 
     public static final String INVENTORY_ITEMS = ".inventory_item";

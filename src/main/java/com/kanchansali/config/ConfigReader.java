@@ -29,4 +29,8 @@ public class ConfigReader {
 
     }
 
+    public static boolean getBoolean(String key) {
+        return Boolean.parseBoolean(get(key));
+    }
+
 }
