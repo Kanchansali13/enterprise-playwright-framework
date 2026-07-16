@@ -16,6 +16,7 @@ public class BrowserFactory {
                 new BrowserType.LaunchOptions()
                         .setHeadless(headless);
 
+
         switch (browserName.toLowerCase()) {
 
             case "firefox":
@@ -23,7 +24,7 @@ public class BrowserFactory {
 
             case "edge":
                 return playwright.chromium().launch(
-                        options.setChannel("msedge"));
+                        options.setChannel("edge"));
 
             default:
                 return playwright.chromium().launch(options);

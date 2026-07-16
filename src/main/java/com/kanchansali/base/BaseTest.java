@@ -12,7 +12,7 @@ public class BaseTest {
     protected Playwright playwright;
     protected Browser browser;
     protected BrowserContext context;
-    protected Page page;
+    public static Page page;
 
     @BeforeMethod
     public void setUp() {

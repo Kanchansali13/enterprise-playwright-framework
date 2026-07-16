@@ -81,5 +81,6 @@ public class CartTest extends BaseTest {
         CheckoutPage checkoutPage = cartPage.checkout();
 
         Assert.assertTrue(checkoutPage.isCheckoutPageDisplayed());
+
     }
 }

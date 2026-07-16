@@ -1,0 +1,406 @@
+2026-07-16 22:11:52 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:11:53 [main] INFO  LoginPage - Entering username
+2026-07-16 22:11:53 [main] INFO  LoginPage - Entering password
+2026-07-16 22:11:53 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:11:53 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:11:56 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:11:56 [main] INFO  LoginPage - Entering username
+2026-07-16 22:11:56 [main] INFO  LoginPage - Entering password
+2026-07-16 22:11:56 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:11:56 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:11:58 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:11:59 [main] INFO  LoginPage - Entering username
+2026-07-16 22:11:59 [main] INFO  LoginPage - Entering password
+2026-07-16 22:11:59 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:11:59 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:12:01 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:12:01 [main] INFO  LoginPage - Entering username
+2026-07-16 22:12:01 [main] INFO  LoginPage - Entering password
+2026-07-16 22:12:01 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:12:02 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:21:38 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:21:42 [main] INFO  LoginPage - Entering username
+2026-07-16 22:21:42 [main] INFO  LoginPage - Entering password
+2026-07-16 22:21:42 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:21:42 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:21:46 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:21:46 [main] INFO  LoginPage - Entering username
+2026-07-16 22:21:46 [main] INFO  LoginPage - Entering password
+2026-07-16 22:21:46 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:21:47 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:21:50 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:21:50 [main] INFO  LoginPage - Entering username
+2026-07-16 22:21:50 [main] INFO  LoginPage - Entering password
+2026-07-16 22:21:50 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:21:50 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:21:53 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:21:53 [main] INFO  LoginPage - Entering username
+2026-07-16 22:21:53 [main] INFO  LoginPage - Entering password
+2026-07-16 22:21:53 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:21:53 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:21:55 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:21:56 [main] INFO  LoginPage - Entering username
+2026-07-16 22:21:56 [main] INFO  LoginPage - Entering password
+2026-07-16 22:21:56 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:21:56 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:22:00 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:22:01 [main] INFO  LoginPage - Entering username
+2026-07-16 22:22:01 [main] INFO  LoginPage - Entering password
+2026-07-16 22:22:01 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:22:01 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:22:03 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:22:04 [main] INFO  LoginPage - Entering username
+2026-07-16 22:22:04 [main] INFO  LoginPage - Entering password
+2026-07-16 22:22:04 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:22:04 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:22:06 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:22:07 [main] INFO  LoginPage - Entering username
+2026-07-16 22:22:07 [main] INFO  LoginPage - Entering password
+2026-07-16 22:22:07 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:22:07 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:22:10 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:22:11 [main] INFO  LoginPage - Entering username
+2026-07-16 22:22:11 [main] INFO  LoginPage - Entering password
+2026-07-16 22:22:11 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:22:11 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:22:13 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:22:13 [main] INFO  LoginPage - Entering username
+2026-07-16 22:22:13 [main] INFO  LoginPage - Entering password
+2026-07-16 22:22:13 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:22:13 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:22:15 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:22:15 [main] INFO  LoginPage - Entering username
+2026-07-16 22:22:15 [main] INFO  LoginPage - Entering password
+2026-07-16 22:22:15 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:22:16 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:22:18 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:22:18 [main] INFO  LoginPage - Entering username
+2026-07-16 22:22:18 [main] INFO  LoginPage - Entering password
+2026-07-16 22:22:18 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:22:18 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:18 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:18 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:18 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:18 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:18 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:18 [main] INFO  TestListener - PASSED : removeProductFromCart
+2026-07-16 22:24:20 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:21 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:21 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:21 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:21 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:21 [main] INFO  TestListener - PASSED : verifyCartItemCount
+2026-07-16 22:24:23 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:24 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:24 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:24 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:24 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:24 [main] ERROR TestListener - FAILED : verifyCheckoutNavigation
+2026-07-16 22:24:26 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:27 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:27 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:27 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:27 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:27 [main] INFO  TestListener - PASSED : verifyProductAddedToCart
+2026-07-16 22:24:29 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:29 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:29 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:29 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:29 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:30 [main] INFO  TestListener - PASSED : completePurchase
+2026-07-16 22:24:32 [main] INFO  TestListener - PASSED : launchBrowser
+2026-07-16 22:24:34 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:34 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:34 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:34 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:34 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:34 [main] INFO  TestListener - PASSED : addMultipleProducts
+2026-07-16 22:24:36 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:37 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:37 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:37 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:37 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:37 [main] INFO  TestListener - PASSED : addSingleProduct
+2026-07-16 22:24:39 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:39 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:39 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:39 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:39 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:39 [main] INFO  TestListener - PASSED : verifyInventoryCount
+2026-07-16 22:24:42 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:42 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:42 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:42 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:42 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:42 [main] INFO  TestListener - PASSED : loginTest
+2026-07-16 22:24:44 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:44 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:45 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:45 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:45 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:45 [main] INFO  TestListener - PASSED : loginTest
+2026-07-16 22:24:46 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:47 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:47 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:47 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:47 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:47 [main] INFO  TestListener - PASSED : loginTest
+2026-07-16 22:24:49 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:24:49 [main] INFO  LoginPage - Entering username
+2026-07-16 22:24:49 [main] INFO  LoginPage - Entering password
+2026-07-16 22:24:49 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:24:49 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:24:49 [main] INFO  TestListener - PASSED : loginTest
+2026-07-16 22:26:53 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:26:54 [main] INFO  LoginPage - Entering username
+2026-07-16 22:26:54 [main] INFO  LoginPage - Entering password
+2026-07-16 22:26:54 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:26:54 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:26:54 [main] INFO  TestListener - PASSED : removeProductFromCart
+2026-07-16 22:26:56 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:26:56 [main] INFO  LoginPage - Entering username
+2026-07-16 22:26:56 [main] INFO  LoginPage - Entering password
+2026-07-16 22:26:56 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:26:57 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:26:57 [main] INFO  TestListener - PASSED : verifyCartItemCount
+2026-07-16 22:26:59 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:26:59 [main] INFO  LoginPage - Entering username
+2026-07-16 22:26:59 [main] INFO  LoginPage - Entering password
+2026-07-16 22:26:59 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:26:59 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:26:59 [main] INFO  TestListener - PASSED : verifyCheckoutNavigation
+2026-07-16 22:27:01 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:27:02 [main] INFO  LoginPage - Entering username
+2026-07-16 22:27:02 [main] INFO  LoginPage - Entering password
+2026-07-16 22:27:02 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:27:02 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:27:02 [main] INFO  TestListener - PASSED : verifyProductAddedToCart
+2026-07-16 22:27:04 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:27:04 [main] INFO  LoginPage - Entering username
+2026-07-16 22:27:04 [main] INFO  LoginPage - Entering password
+2026-07-16 22:27:04 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:27:04 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:27:05 [main] INFO  TestListener - PASSED : completePurchase
+2026-07-16 22:27:07 [main] INFO  TestListener - PASSED : launchBrowser
+2026-07-16 22:27:08 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:27:09 [main] INFO  LoginPage - Entering username
+2026-07-16 22:27:09 [main] INFO  LoginPage - Entering password
+2026-07-16 22:27:09 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:27:09 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:27:09 [main] INFO  TestListener - PASSED : addMultipleProducts
+2026-07-16 22:27:11 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:27:11 [main] INFO  LoginPage - Entering username
+2026-07-16 22:27:11 [main] INFO  LoginPage - Entering password
+2026-07-16 22:27:11 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:27:11 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:27:11 [main] INFO  TestListener - PASSED : addSingleProduct
+2026-07-16 22:27:13 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:27:14 [main] INFO  LoginPage - Entering username
+2026-07-16 22:27:14 [main] INFO  LoginPage - Entering password
+2026-07-16 22:27:14 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:27:14 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:27:14 [main] INFO  TestListener - PASSED : verifyInventoryCount
+2026-07-16 22:27:16 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:27:16 [main] INFO  LoginPage - Entering username
+2026-07-16 22:27:16 [main] INFO  LoginPage - Entering password
+2026-07-16 22:27:16 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:27:17 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:27:17 [main] INFO  TestListener - PASSED : loginTest
+2026-07-16 22:27:18 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:27:19 [main] INFO  LoginPage - Entering username
+2026-07-16 22:27:19 [main] INFO  LoginPage - Entering password
+2026-07-16 22:27:19 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:27:19 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:27:19 [main] INFO  TestListener - PASSED : loginTest
+2026-07-16 22:27:21 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:27:21 [main] INFO  LoginPage - Entering username
+2026-07-16 22:27:21 [main] INFO  LoginPage - Entering password
+2026-07-16 22:27:21 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:27:21 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:27:21 [main] INFO  TestListener - PASSED : loginTest
+2026-07-16 22:27:23 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:27:23 [main] INFO  LoginPage - Entering username
+2026-07-16 22:27:24 [main] INFO  LoginPage - Entering password
+2026-07-16 22:27:24 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:27:24 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:27:24 [main] INFO  TestListener - PASSED : loginTest
+2026-07-16 22:33:49 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:33:49 [main] INFO  LoginPage - Entering username
+2026-07-16 22:33:49 [main] INFO  LoginPage - Entering password
+2026-07-16 22:33:49 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:33:49 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:33:52 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:33:52 [main] INFO  LoginPage - Entering username
+2026-07-16 22:33:53 [main] INFO  LoginPage - Entering password
+2026-07-16 22:33:53 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:33:53 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:33:55 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:33:55 [main] INFO  LoginPage - Entering username
+2026-07-16 22:33:56 [main] INFO  LoginPage - Entering password
+2026-07-16 22:33:56 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:33:56 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:33:58 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:33:58 [main] INFO  LoginPage - Entering username
+2026-07-16 22:33:58 [main] INFO  LoginPage - Entering password
+2026-07-16 22:33:59 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:33:59 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:34:01 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:34:01 [main] INFO  LoginPage - Entering username
+2026-07-16 22:34:01 [main] INFO  LoginPage - Entering password
+2026-07-16 22:34:01 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:34:01 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:34:06 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:34:07 [main] INFO  LoginPage - Entering username
+2026-07-16 22:34:07 [main] INFO  LoginPage - Entering password
+2026-07-16 22:34:07 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:34:07 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:34:09 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:34:10 [main] INFO  LoginPage - Entering username
+2026-07-16 22:34:10 [main] INFO  LoginPage - Entering password
+2026-07-16 22:34:10 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:34:10 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:34:12 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:34:12 [main] INFO  LoginPage - Entering username
+2026-07-16 22:34:13 [main] INFO  LoginPage - Entering password
+2026-07-16 22:34:13 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:34:13 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:34:15 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:34:16 [main] INFO  LoginPage - Entering username
+2026-07-16 22:34:16 [main] INFO  LoginPage - Entering password
+2026-07-16 22:34:16 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:34:16 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:34:18 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:34:18 [main] INFO  LoginPage - Entering username
+2026-07-16 22:34:18 [main] INFO  LoginPage - Entering password
+2026-07-16 22:34:18 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:34:18 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:34:20 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:34:21 [main] INFO  LoginPage - Entering username
+2026-07-16 22:34:21 [main] INFO  LoginPage - Entering password
+2026-07-16 22:34:21 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:34:21 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:34:28 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:34:28 [main] INFO  LoginPage - Entering username
+2026-07-16 22:34:28 [main] INFO  LoginPage - Entering password
+2026-07-16 22:34:28 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:34:29 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:20 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:21 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:21 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:21 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:21 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:23 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:23 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:24 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:24 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:24 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:26 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:27 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:27 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:27 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:27 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:29 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:29 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:29 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:29 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:30 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:32 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:32 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:32 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:32 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:32 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:37 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:37 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:38 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:38 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:38 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:40 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:40 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:40 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:40 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:41 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:43 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:43 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:43 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:43 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:43 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:46 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:46 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:46 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:46 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:46 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:48 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:49 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:49 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:49 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:49 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:51 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:51 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:52 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:52 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:52 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:36:54 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:36:54 [main] INFO  LoginPage - Entering username
+2026-07-16 22:36:54 [main] INFO  LoginPage - Entering password
+2026-07-16 22:36:54 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:36:54 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:01 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:01 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:01 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:01 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:01 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:04 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:04 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:04 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:04 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:04 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:07 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:07 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:07 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:07 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:07 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:09 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:10 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:10 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:10 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:10 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:12 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:13 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:13 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:13 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:13 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:18 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:18 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:19 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:19 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:19 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:21 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:21 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:21 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:21 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:22 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:24 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:24 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:24 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:24 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:24 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:27 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:27 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:27 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:27 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:27 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:29 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:30 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:30 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:30 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:30 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:32 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:32 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:32 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:32 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:32 [main] INFO  LoginPage - Login request submitted
+2026-07-16 22:44:34 [main] INFO  LoginPage - Opening Login Page
+2026-07-16 22:44:35 [main] INFO  LoginPage - Entering username
+2026-07-16 22:44:35 [main] INFO  LoginPage - Entering password
+2026-07-16 22:44:35 [main] INFO  LoginPage - Clicking Login button
+2026-07-16 22:44:35 [main] INFO  LoginPage - Login request submitted
