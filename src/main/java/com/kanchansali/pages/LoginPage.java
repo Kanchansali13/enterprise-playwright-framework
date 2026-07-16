@@ -34,4 +34,9 @@ public class LoginPage extends BasePage {
 
     }
 
+    public boolean isErrorDisplayed() {
+
+        return locator(LoginPageLocators.ERROR_MESSAGE).isVisible();
+
+    }
 }

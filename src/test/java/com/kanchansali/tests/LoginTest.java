@@ -1,6 +1,7 @@
 package com.kanchansali.tests;
 
 import com.kanchansali.base.BaseTest;
+import dataproviders.LoginDataProvider;
 import com.kanchansali.pages.InventoryPage;
 import com.kanchansali.pages.LoginPage;
 import org.testng.Assert;
@@ -8,33 +9,30 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-    @Test
-
-    public void validLogin() {
+    @Test(dataProvider = "loginData", dataProviderClass = LoginDataProvider.class)
+    public void loginTest(String username,
+                          String password,
+                          String expected) {
 
         LoginPage loginPage = new LoginPage(page);
 
         loginPage.open();
 
         InventoryPage inventoryPage =
-                loginPage.login("standard_user","secret_sauce");
+                loginPage.login(username, password);
 
-        Assert.assertTrue(inventoryPage.isInventoryDisplayed());
+        if (expected.equalsIgnoreCase("PASS")) {
 
+            Assert.assertTrue(
+                    inventoryPage.isInventoryDisplayed(),
+                    "Login should be successful");
+
+        } else {
+
+            Assert.assertTrue(
+                    loginPage.isErrorDisplayed(),
+                    "Error message should be displayed");
+
+        }
     }
-
-    @Test
-
-    public void invalidLogin() {
-
-        LoginPage loginPage = new LoginPage(page);
-
-        loginPage.open();
-
-        loginPage.login("wrong","wrong");
-
-        Assert.assertTrue(loginPage.getErrorMessage().contains("Username"));
-
-    }
-
 }

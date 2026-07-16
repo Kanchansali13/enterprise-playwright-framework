@@ -96,6 +96,8 @@
             <version>${restassured.version}</version>
         </dependency>
 
+
+
     </dependencies>
 
     <build>
