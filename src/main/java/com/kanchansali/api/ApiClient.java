@@ -1,15 +1,26 @@
 package com.kanchansali.api;
 
-import io.restassured.response.Response;
+import com.kanchansali.config.ConfigReader;
 import io.restassured.RestAssured;
+import io.restassured.response.Response;
 
 public class ApiClient {
 
-    public Response get(String endpoint){
+    public Response get(String endpoint) {
 
-        return RestAssured.given().baseUri(Endpoints.BASE_URL).header("x-api-key", "free_user_3GftHBVXZzGTaQkUIOPKGpiedjr")
+        return RestAssured
+                .given()
+                .baseUri(Endpoints.BASE_URL)
+                .header("x-api-key", ConfigReader.get("api.key"))
+                .log().all()
+
                 .when()
-                .get(endpoint);
+                .get(endpoint)
+
+                .then()
+                .log().all()
+                .extract()
+                .response();
     }
 
     public Response post(String endpoint, Object body) {
@@ -17,10 +28,18 @@ public class ApiClient {
         return RestAssured
                 .given()
                 .baseUri(Endpoints.BASE_URL)
+                .header("x-api-key", ConfigReader.get("api.key"))
                 .contentType("application/json")
+                .log().all()
                 .body(body)
+
                 .when()
-                .post(endpoint);
+                .post(endpoint)
+
+                .then()
+                .log().all()
+                .extract()
+                .response();
     }
 
     public Response put(String endpoint, Object body) {
@@ -28,10 +47,18 @@ public class ApiClient {
         return RestAssured
                 .given()
                 .baseUri(Endpoints.BASE_URL)
+                .header("x-api-key", ConfigReader.get("api.key"))
                 .contentType("application/json")
+                .log().all()
                 .body(body)
+
                 .when()
-                .put(endpoint);
+                .put(endpoint)
+
+                .then()
+                .log().all()
+                .extract()
+                .response();
     }
 
     public Response delete(String endpoint) {
@@ -39,9 +66,15 @@ public class ApiClient {
         return RestAssured
                 .given()
                 .baseUri(Endpoints.BASE_URL)
+                .header("x-api-key", ConfigReader.get("api.key"))
+                .log().all()
+
                 .when()
-                .delete(endpoint);
+                .delete(endpoint)
+
+                .then()
+                .log().all()
+                .extract()
+                .response();
     }
 }
-
-
