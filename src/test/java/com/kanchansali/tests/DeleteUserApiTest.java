@@ -1,6 +1,7 @@
 package com.kanchansali.tests;
 
 import com.kanchansali.config.ConfigReader;
+import com.kanchansali.specifications.ResponseSpecs;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;
@@ -17,6 +18,7 @@ public class DeleteUserApiTest {
                 .when()
                 .delete("https://reqres.in/api/users/2");
 
-        Assert.assertEquals(response.statusCode(), 204);
+        response.then()
+                .spec(ResponseSpecs.deleteResponse());
     }
 }

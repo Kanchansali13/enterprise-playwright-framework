@@ -4,11 +4,13 @@ import com.github.javafaker.Faker;
 import com.kanchansali.api.ApiClient;
 import com.kanchansali.api.Endpoints;
 import com.kanchansali.models.User;
+import com.kanchansali.models.UserResponse;
+import com.kanchansali.specifications.ResponseSpecs;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class PostUserApiTest {
+public class PostUserApiTest extends BaseApiTest {
 
     Faker faker=new Faker();
 
@@ -28,12 +30,17 @@ public class PostUserApiTest {
 
         response.prettyPrint();
 
-        Assert.assertEquals(response.statusCode(), 201);
+        response.then()
+                .spec(ResponseSpecs.createdResponse());
 
 
-        Assert.assertEquals(response.jsonPath().getString("name"), "Kanchan");
+        UserResponse userResponse = response.as(UserResponse.class);
 
-        Assert.assertEquals(response.jsonPath().getString("job"), "SDET");
+        Assert.assertEquals(userResponse.getName(), "Kanchan");
+        Assert.assertEquals(userResponse.getJob(), "SDET");
+
+        System.out.println(userResponse.getId());
+        System.out.println(userResponse.getCreatedAt());
     }
 
 }
