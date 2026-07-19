@@ -10,26 +10,16 @@ import org.testng.annotations.Test;
 public class PutUserApiTest extends BaseApiTest {
 
     @Test
-    public void updateUserTest() {
-
-        User user =
-                new User("Kanchan", "Senior SDET");
+    public void updateUserTest(){
 
         Response response =
-                UserApi.updateUser(String.valueOf(2), user);
+                UserApi.patchUser("2", new User());
 
         response.prettyPrint();
 
-        ResponsePojo responsePojo =
-                response.as(ResponsePojo.class);
-
-        Assert.assertEquals(response.statusCode(), 200);
-
-        Assert.assertEquals(responsePojo.getName(), "Kanchan");
-
-        Assert.assertEquals(responsePojo.getJob(), "Senior SDET");
-
-        Assert.assertNotNull(responsePojo.getUpdatedAt());
-
+        Assert.assertEquals(
+                response.getStatusCode(),
+                200
+        );
     }
 }

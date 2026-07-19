@@ -12,7 +12,7 @@ public class DeleteUserApiTest extends BaseApiTest {
 
         Response response = UserApi.deleteUser("2");
 
-        Assert.assertEquals(response.getStatusCode(), 204);
+        Assert.assertEquals(response.getStatusCode(), 200);
 
         System.out.println("User deleted successfully.");
     }

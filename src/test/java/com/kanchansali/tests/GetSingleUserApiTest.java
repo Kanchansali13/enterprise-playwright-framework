@@ -18,12 +18,14 @@ public class GetSingleUserApiTest extends BaseApiTest {
         Assert.assertEquals(response.getStatusCode(), 200);
 
         Assert.assertEquals(
-                response.jsonPath().getInt("data.id"),
-                2);
+                response.jsonPath().getInt("id"),
+                2
+        );
 
         Assert.assertEquals(
-                response.jsonPath().getString("data.first_name"),
-                "Janet");
+                response.jsonPath().getString("name"),
+                "Ervin Howell"
+        );
     }
 
     @Test
