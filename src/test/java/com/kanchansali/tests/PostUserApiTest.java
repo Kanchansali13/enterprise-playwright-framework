@@ -4,15 +4,19 @@ import com.github.javafaker.Faker;
 import com.kanchansali.api.ApiClient;
 import com.kanchansali.api.Endpoints;
 import com.kanchansali.models.User;
+import com.kanchansali.models.ResponsePojo;
 import com.kanchansali.models.UserResponse;
 import com.kanchansali.specifications.RequestSpecs;
 import com.kanchansali.specifications.ResponseSpecs;
 import com.kanchansali.utils.LoggerUtil;
+import dataproviders.UserDataProvider;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import com.kanchansali.api.UserApi;
+
 
 public class PostUserApiTest extends BaseApiTest {
 
@@ -49,24 +53,28 @@ public class PostUserApiTest extends BaseApiTest {
 //        System.out.println(userResponse.getId());
 //        System.out.println(userResponse.getCreatedAt());
 //    }
-@Test(groups = {"regression", "api"})
-public void createUser() {
 
-    logger.info("Creating User");
+    @Test(dataProvider = "userData", dataProviderClass = UserDataProvider.class)
+    public void createUser(String name, String job) {
 
-    ApiClient apiClient = new ApiClient();
+        User user = new User(name, job);
 
-    User user = new User("Kanchan", "SDET");
+        Response response =
+                UserApi.createUser(user);
 
-    Response response = apiClient.post(Endpoints.USERS, user);
+        ResponsePojo responsePojo =
+                response.as(ResponsePojo.class);
 
-    logger.info("Status Code : {}", response.statusCode());
-    logger.info("Response : {}", response.asPrettyString());
+        Assert.assertEquals(response.getStatusCode(), 201);
 
-    Assert.assertEquals(response.statusCode(), 201);
-    Assert.assertEquals(response.jsonPath().getString("name"), "Kanchan");
-    Assert.assertEquals(response.jsonPath().getString("job"), "SDET");
-}
+        Assert.assertEquals(responsePojo.getName(), name);
+
+        Assert.assertEquals(responsePojo.getJob(), job);
+
+        Assert.assertNotNull(responsePojo.getId());
+
+        Assert.assertNotNull(responsePojo.getCreatedAt());
+    }
 
     public Response post(String endpoint, Object body) {
 

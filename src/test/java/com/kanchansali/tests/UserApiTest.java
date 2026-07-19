@@ -1,5 +1,7 @@
-package com.kanchansali.api;
+package com.kanchansali.tests;
 
+import com.kanchansali.api.ApiClient;
+import com.kanchansali.api.Endpoints;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
