@@ -18,16 +18,17 @@ public class UserApi {
 
 
 
-    public static Response updateUser(int id, User user) {
+    public static Response updateUser(String id, User user) {
 
         return RestAssured
-                .given(RequestSpecs.getRequestSpec())
+                .given()
+                .spec(RequestSpecs.getRequestSpec())
                 .body(user)
                 .when()
                 .put(Endpoints.USERS + "/" + id);
     }
 
-    public static Response patchUser(int id, User user) {
+    public static Response patchUser(String id, User user) {
 
         return RestAssured
                 .given()
@@ -37,10 +38,11 @@ public class UserApi {
                 .patch(Endpoints.USERS + "/" + id);
     }
 
-    public static Response deleteUser(int id) {
+    public static Response deleteUser(String id) {
 
         return RestAssured
-                .given(RequestSpecs.getRequestSpec())
+                .given()
+                .spec(RequestSpecs.getRequestSpec())
                 .when()
                 .delete(Endpoints.USERS + "/" + id);
     }

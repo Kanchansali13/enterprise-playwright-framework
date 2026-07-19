@@ -28,9 +28,25 @@
         "last_name",
         "avatar"
       ]
+    },
+    "support": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "text"
+      ]
     }
   },
   "required": [
-    "data"
+    "data",
+    "support"
   ]
 }

@@ -16,7 +16,7 @@ public class PatchUserApiTest extends BaseApiTest {
         user.setJob("Senior SDET");
 
         Response response =
-                UserApi.patchUser(2, user);
+                UserApi.patchUser("2", user);
 
         ResponsePojo responsePojo =
                 response.as(ResponsePojo.class);

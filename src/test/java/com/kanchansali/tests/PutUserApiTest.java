@@ -16,7 +16,7 @@ public class PutUserApiTest extends BaseApiTest {
                 new User("Kanchan", "Senior SDET");
 
         Response response =
-                UserApi.updateUser(2, user);
+                UserApi.updateUser(String.valueOf(2), user);
 
         response.prettyPrint();
 
