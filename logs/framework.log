@@ -1,0 +1,243 @@
+2026-07-19 12:59:00 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:00 INFO  LoginPage - Entering username
+2026-07-19 12:59:00 INFO  LoginPage - Entering password
+2026-07-19 12:59:01 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:01 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:04 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:04 INFO  LoginPage - Entering username
+2026-07-19 12:59:05 INFO  LoginPage - Entering password
+2026-07-19 12:59:05 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:05 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:08 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:09 INFO  LoginPage - Entering username
+2026-07-19 12:59:09 INFO  LoginPage - Entering password
+2026-07-19 12:59:09 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:10 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:13 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:13 INFO  LoginPage - Entering username
+2026-07-19 12:59:13 INFO  LoginPage - Entering password
+2026-07-19 12:59:13 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:13 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:16 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:17 INFO  LoginPage - Entering username
+2026-07-19 12:59:17 INFO  LoginPage - Entering password
+2026-07-19 12:59:17 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:17 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:28 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:28 INFO  LoginPage - Entering username
+2026-07-19 12:59:29 INFO  LoginPage - Entering password
+2026-07-19 12:59:29 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:29 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:32 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:33 INFO  LoginPage - Entering username
+2026-07-19 12:59:33 INFO  LoginPage - Entering password
+2026-07-19 12:59:33 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:33 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:36 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:36 INFO  LoginPage - Entering username
+2026-07-19 12:59:36 INFO  LoginPage - Entering password
+2026-07-19 12:59:37 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:37 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:40 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:41 INFO  LoginPage - Entering username
+2026-07-19 12:59:41 INFO  LoginPage - Entering password
+2026-07-19 12:59:41 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:41 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:44 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:45 INFO  LoginPage - Entering username
+2026-07-19 12:59:45 INFO  LoginPage - Entering password
+2026-07-19 12:59:45 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:45 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:48 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:48 INFO  LoginPage - Entering username
+2026-07-19 12:59:49 INFO  LoginPage - Entering password
+2026-07-19 12:59:49 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:49 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:52 INFO  LoginPage - Opening Login Page
+2026-07-19 12:59:52 INFO  LoginPage - Entering username
+2026-07-19 12:59:52 INFO  LoginPage - Entering password
+2026-07-19 12:59:52 INFO  LoginPage - Clicking Login button
+2026-07-19 12:59:52 INFO  LoginPage - Login request submitted
+2026-07-19 12:59:56 INFO  PostUserApiTest - Creating User
+2026-07-19 12:59:57 INFO  PostUserApiTest - Status Code : 201
+2026-07-19 12:59:57 INFO  PostUserApiTest - Response : {
+    "name": "Kanchan",
+    "job": "SDET",
+    "id": "186",
+    "createdAt": "2026-07-19T07:29:57.136Z",
+    "_meta": {
+        "powered_by": "ReqRes",
+        "docs_url": "https://app.reqres.in/documentation",
+        "upgrade_url": "https://app.reqres.in/upgrade",
+        "example_url": "https://app.reqres.in/examples/notes-app",
+        "variant": "v1_a",
+        "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
+        "cta": {
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
+        },
+        "context": "legacy_success"
+    }
+}
+2026-07-19 18:26:17 INFO  LoginPage - Opening Login Page
+2026-07-19 18:26:17 INFO  LoginPage - Entering username
+2026-07-19 18:26:17 INFO  LoginPage - Entering password
+2026-07-19 18:26:17 INFO  LoginPage - Clicking Login button
+2026-07-19 18:26:18 INFO  LoginPage - Login request submitted
+2026-07-19 18:26:20 INFO  LoginPage - Opening Login Page
+2026-07-19 18:26:21 INFO  LoginPage - Entering username
+2026-07-19 18:26:21 INFO  LoginPage - Entering password
+2026-07-19 18:26:21 INFO  LoginPage - Clicking Login button
+2026-07-19 18:26:21 INFO  LoginPage - Login request submitted
+2026-07-19 18:26:23 INFO  LoginPage - Opening Login Page
+2026-07-19 18:26:24 INFO  LoginPage - Entering username
+2026-07-19 18:26:24 INFO  LoginPage - Entering password
+2026-07-19 18:26:24 INFO  LoginPage - Clicking Login button
+2026-07-19 18:26:24 INFO  LoginPage - Login request submitted
+2026-07-19 18:26:26 INFO  LoginPage - Opening Login Page
+2026-07-19 18:26:32 INFO  LoginPage - Entering username
+2026-07-19 18:26:32 INFO  LoginPage - Entering password
+2026-07-19 18:26:32 INFO  LoginPage - Clicking Login button
+2026-07-19 18:26:32 INFO  LoginPage - Login request submitted
+2026-07-19 18:26:35 INFO  LoginPage - Opening Login Page
+2026-07-19 18:26:35 INFO  LoginPage - Entering username
+2026-07-19 18:26:35 INFO  LoginPage - Entering password
+2026-07-19 18:26:35 INFO  LoginPage - Clicking Login button
+2026-07-19 18:26:35 INFO  LoginPage - Login request submitted
+2026-07-19 18:26:44 INFO  LoginPage - Opening Login Page
+2026-07-19 18:26:44 INFO  LoginPage - Entering username
+2026-07-19 18:26:44 INFO  LoginPage - Entering password
+2026-07-19 18:26:44 INFO  LoginPage - Clicking Login button
+2026-07-19 18:26:44 INFO  LoginPage - Login request submitted
+2026-07-19 18:26:47 INFO  LoginPage - Opening Login Page
+2026-07-19 18:26:47 INFO  LoginPage - Entering username
+2026-07-19 18:26:47 INFO  LoginPage - Entering password
+2026-07-19 18:26:47 INFO  LoginPage - Clicking Login button
+2026-07-19 18:26:47 INFO  LoginPage - Login request submitted
+2026-07-19 18:26:50 INFO  LoginPage - Opening Login Page
+2026-07-19 18:26:50 INFO  LoginPage - Entering username
+2026-07-19 18:26:50 INFO  LoginPage - Entering password
+2026-07-19 18:26:50 INFO  LoginPage - Clicking Login button
+2026-07-19 18:26:50 INFO  LoginPage - Login request submitted
+2026-07-19 18:26:53 INFO  LoginPage - Opening Login Page
+2026-07-19 18:26:53 INFO  LoginPage - Entering username
+2026-07-19 18:26:53 INFO  LoginPage - Entering password
+2026-07-19 18:26:54 INFO  LoginPage - Clicking Login button
+2026-07-19 18:26:54 INFO  LoginPage - Login request submitted
+2026-07-19 18:26:56 INFO  LoginPage - Opening Login Page
+2026-07-19 18:26:56 INFO  LoginPage - Entering username
+2026-07-19 18:26:56 INFO  LoginPage - Entering password
+2026-07-19 18:26:56 INFO  LoginPage - Clicking Login button
+2026-07-19 18:26:57 INFO  LoginPage - Login request submitted
+2026-07-19 18:26:59 INFO  LoginPage - Opening Login Page
+2026-07-19 18:26:59 INFO  LoginPage - Entering username
+2026-07-19 18:26:59 INFO  LoginPage - Entering password
+2026-07-19 18:26:59 INFO  LoginPage - Clicking Login button
+2026-07-19 18:26:59 INFO  LoginPage - Login request submitted
+2026-07-19 18:27:06 INFO  LoginPage - Opening Login Page
+2026-07-19 18:27:07 INFO  LoginPage - Entering username
+2026-07-19 18:27:07 INFO  LoginPage - Entering password
+2026-07-19 18:27:07 INFO  LoginPage - Clicking Login button
+2026-07-19 18:27:07 INFO  LoginPage - Login request submitted
+2026-07-19 18:27:09 INFO  PostUserApiTest - Creating User
+2026-07-19 18:27:10 INFO  PostUserApiTest - Status Code : 201
+2026-07-19 18:27:10 INFO  PostUserApiTest - Response : {
+    "name": "Kanchan",
+    "job": "SDET",
+    "id": "558",
+    "createdAt": "2026-07-19T12:57:10.753Z",
+    "_meta": {
+        "powered_by": "ReqRes",
+        "docs_url": "https://app.reqres.in/documentation",
+        "upgrade_url": "https://app.reqres.in/upgrade",
+        "example_url": "https://app.reqres.in/examples/notes-app",
+        "variant": "v1_a",
+        "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
+        "cta": {
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
+        },
+        "context": "legacy_success"
+    }
+}
+2026-07-19 18:35:18 INFO  LoginPage - Opening Login Page
+2026-07-19 18:35:19 INFO  LoginPage - Entering username
+2026-07-19 18:35:19 INFO  LoginPage - Entering password
+2026-07-19 18:35:19 INFO  LoginPage - Clicking Login button
+2026-07-19 18:35:19 INFO  LoginPage - Login request submitted
+2026-07-19 18:35:21 INFO  LoginPage - Opening Login Page
+2026-07-19 18:35:26 INFO  LoginPage - Entering username
+2026-07-19 18:35:27 INFO  LoginPage - Entering password
+2026-07-19 18:35:27 INFO  LoginPage - Clicking Login button
+2026-07-19 18:35:27 INFO  LoginPage - Login request submitted
+2026-07-19 18:35:29 INFO  LoginPage - Opening Login Page
+2026-07-19 18:35:30 INFO  LoginPage - Entering username
+2026-07-19 18:35:30 INFO  LoginPage - Entering password
+2026-07-19 18:35:30 INFO  LoginPage - Clicking Login button
+2026-07-19 18:35:30 INFO  LoginPage - Login request submitted
+2026-07-19 18:35:32 INFO  LoginPage - Opening Login Page
+2026-07-19 18:35:32 INFO  LoginPage - Entering username
+2026-07-19 18:35:33 INFO  LoginPage - Entering password
+2026-07-19 18:35:33 INFO  LoginPage - Clicking Login button
+2026-07-19 18:35:33 INFO  LoginPage - Login request submitted
+2026-07-19 18:35:35 INFO  LoginPage - Opening Login Page
+2026-07-19 18:35:36 INFO  LoginPage - Entering username
+2026-07-19 18:35:36 INFO  LoginPage - Entering password
+2026-07-19 18:35:36 INFO  LoginPage - Clicking Login button
+2026-07-19 18:35:36 INFO  LoginPage - Login request submitted
+2026-07-19 18:35:44 INFO  LoginPage - Opening Login Page
+2026-07-19 18:35:45 INFO  LoginPage - Entering username
+2026-07-19 18:35:45 INFO  LoginPage - Entering password
+2026-07-19 18:35:45 INFO  LoginPage - Clicking Login button
+2026-07-19 18:35:45 INFO  LoginPage - Login request submitted
+2026-07-19 18:35:47 INFO  LoginPage - Opening Login Page
+2026-07-19 18:35:47 INFO  LoginPage - Entering username
+2026-07-19 18:35:48 INFO  LoginPage - Entering password
+2026-07-19 18:35:48 INFO  LoginPage - Clicking Login button
+2026-07-19 18:35:48 INFO  LoginPage - Login request submitted
+2026-07-19 18:35:50 INFO  LoginPage - Opening Login Page
+2026-07-19 18:35:50 INFO  LoginPage - Entering username
+2026-07-19 18:35:50 INFO  LoginPage - Entering password
+2026-07-19 18:35:50 INFO  LoginPage - Clicking Login button
+2026-07-19 18:35:51 INFO  LoginPage - Login request submitted
+2026-07-19 18:35:53 INFO  LoginPage - Opening Login Page
+2026-07-19 18:35:53 INFO  LoginPage - Entering username
+2026-07-19 18:35:53 INFO  LoginPage - Entering password
+2026-07-19 18:35:54 INFO  LoginPage - Clicking Login button
+2026-07-19 18:35:54 INFO  LoginPage - Login request submitted
+2026-07-19 18:35:56 INFO  LoginPage - Opening Login Page
+2026-07-19 18:35:56 INFO  LoginPage - Entering username
+2026-07-19 18:35:56 INFO  LoginPage - Entering password
+2026-07-19 18:35:56 INFO  LoginPage - Clicking Login button
+2026-07-19 18:35:57 INFO  LoginPage - Login request submitted
+2026-07-19 18:35:59 INFO  LoginPage - Opening Login Page
+2026-07-19 18:35:59 INFO  LoginPage - Entering username
+2026-07-19 18:35:59 INFO  LoginPage - Entering password
+2026-07-19 18:35:59 INFO  LoginPage - Clicking Login button
+2026-07-19 18:35:59 INFO  LoginPage - Login request submitted
+2026-07-19 18:36:01 INFO  LoginPage - Opening Login Page
+2026-07-19 18:36:02 INFO  LoginPage - Entering username
+2026-07-19 18:36:02 INFO  LoginPage - Entering password
+2026-07-19 18:36:02 INFO  LoginPage - Clicking Login button
+2026-07-19 18:36:02 INFO  LoginPage - Login request submitted
+2026-07-19 18:36:05 INFO  PostUserApiTest - Creating User
+2026-07-19 18:36:05 INFO  PostUserApiTest - Status Code : 201
+2026-07-19 18:36:05 INFO  PostUserApiTest - Response : {
+    "name": "Kanchan",
+    "job": "SDET",
+    "id": "989",
+    "createdAt": "2026-07-19T13:06:06.019Z",
+    "_meta": {
+        "powered_by": "ReqRes",
+        "docs_url": "https://app.reqres.in/documentation",
+        "upgrade_url": "https://app.reqres.in/upgrade",
+        "example_url": "https://app.reqres.in/examples/notes-app",
+        "variant": "v1_a",
+        "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
+        "cta": {
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
+        },
+        "context": "legacy_success"
+    }
+}

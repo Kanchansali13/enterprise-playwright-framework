@@ -35,4 +35,9 @@ public class LoginTest extends BaseTest {
 
         }
     }
+
+    @Test(groups = {"smoke", "ui"})
+    public void validLoginTest() {
+
+    }
 }

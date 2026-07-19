@@ -1,10 +1,16 @@
 package com.kanchansali.api;
 
 import com.kanchansali.config.ConfigReader;
+import com.kanchansali.utils.LoggerUtil;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.apache.logging.log4j.Logger;
+
 
 public class ApiClient {
+
+    private static final Logger logger =
+            LoggerUtil.getLogger(ApiClient.class);
 
     public Response get(String endpoint) {
 

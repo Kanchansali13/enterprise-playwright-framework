@@ -1,6 +1,6 @@
 package com.kanchansali.pages;
 import org.apache.logging.log4j.Logger;
-import com.kanchansali.utilities.LoggerUtil;
+import com.kanchansali.utils.LoggerUtil;
 
 import com.kanchansali.config.ConfigReader;
 import com.kanchansali.constants.LoginPageLocators;
@@ -10,6 +10,8 @@ public class LoginPage extends BasePage {
 
     private static final Logger logger =
             LoggerUtil.getLogger(LoginPage.class);
+
+
 
     public LoginPage(Page page) {
         super(page);

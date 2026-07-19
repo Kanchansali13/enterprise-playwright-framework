@@ -1,7 +1,7 @@
 package com.kanchansali.listeners;
 
 import com.kanchansali.base.BaseTest;
-import com.kanchansali.utilities.LoggerUtil;
+import com.kanchansali.utils.LoggerUtil;
 import com.kanchansali.utilities.ScreenshotUtils;
 import org.apache.logging.log4j.Logger;
 import org.testng.ITestListener;
