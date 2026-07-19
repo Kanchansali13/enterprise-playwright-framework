@@ -30,7 +30,8 @@ public class UserApi {
     public static Response patchUser(int id, User user) {
 
         return RestAssured
-                .given(RequestSpecs.getRequestSpec())
+                .given()
+                .spec(RequestSpecs.getRequestSpec())
                 .body(user)
                 .when()
                 .patch(Endpoints.USERS + "/" + id);
@@ -42,5 +43,14 @@ public class UserApi {
                 .given(RequestSpecs.getRequestSpec())
                 .when()
                 .delete(Endpoints.USERS + "/" + id);
+    }
+
+    public static Response getUser(int id) {
+
+        return RestAssured
+                .given()
+                .spec(RequestSpecs.getRequestSpec())
+                .when()
+                .get(Endpoints.USERS + "/" + id);
     }
 }

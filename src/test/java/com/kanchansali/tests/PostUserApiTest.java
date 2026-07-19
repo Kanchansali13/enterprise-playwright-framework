@@ -1,6 +1,6 @@
 package com.kanchansali.tests;
 import com.github.javafaker.Faker;
-
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import com.kanchansali.api.ApiClient;
 import com.kanchansali.api.Endpoints;
 import com.kanchansali.models.User;
@@ -16,6 +16,7 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.kanchansali.api.UserApi;
+
 
 
 public class PostUserApiTest extends BaseApiTest {
@@ -61,19 +62,17 @@ public class PostUserApiTest extends BaseApiTest {
 
         Response response =
                 UserApi.createUser(user);
+        response.then()
+                .assertThat()
+                .body(matchesJsonSchemaInClasspath("schemas/createUserSchema.json"));
 
         ResponsePojo responsePojo =
                 response.as(ResponsePojo.class);
 
-        Assert.assertEquals(response.getStatusCode(), 201);
 
-        Assert.assertEquals(responsePojo.getName(), name);
-
-        Assert.assertEquals(responsePojo.getJob(), job);
-
-        Assert.assertNotNull(responsePojo.getId());
-
-        Assert.assertNotNull(responsePojo.getCreatedAt());
+        Assert.assertEquals(response.getStatusCode(),201);
+        Assert.assertEquals(responsePojo.getName(),name);
+        Assert.assertEquals(responsePojo.getJob(),job);
     }
 
     public Response post(String endpoint, Object body) {
