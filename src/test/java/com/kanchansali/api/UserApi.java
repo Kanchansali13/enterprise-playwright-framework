@@ -15,4 +15,32 @@ public class UserApi {
                 .when()
                 .post(Endpoints.USERS);
     }
+
+
+
+    public static Response updateUser(int id, User user) {
+
+        return RestAssured
+                .given(RequestSpecs.getRequestSpec())
+                .body(user)
+                .when()
+                .put(Endpoints.USERS + "/" + id);
+    }
+
+    public static Response patchUser(int id, User user) {
+
+        return RestAssured
+                .given(RequestSpecs.getRequestSpec())
+                .body(user)
+                .when()
+                .patch(Endpoints.USERS + "/" + id);
+    }
+
+    public static Response deleteUser(int id) {
+
+        return RestAssured
+                .given(RequestSpecs.getRequestSpec())
+                .when()
+                .delete(Endpoints.USERS + "/" + id);
+    }
 }

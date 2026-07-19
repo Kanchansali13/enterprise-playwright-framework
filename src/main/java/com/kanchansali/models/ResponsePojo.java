@@ -9,6 +9,7 @@ public class ResponsePojo {
     private String job;
     private String id;
     private String createdAt;
+    private String updatedAt;
 
     public ResponsePojo() {
     }
@@ -43,5 +44,14 @@ public class ResponsePojo {
 
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getUpdatedAt() {
+
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
