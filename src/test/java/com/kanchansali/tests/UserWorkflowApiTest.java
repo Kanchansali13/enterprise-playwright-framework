@@ -1,64 +1,68 @@
 package com.kanchansali.tests;
 
 import com.kanchansali.api.UserApi;
-import com.kanchansali.models.ResponsePojo;
 import com.kanchansali.models.User;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class UserWorkflowApiTest extends BaseApiTest {
+    String token = com.kanchansali.utils.TokenManager.getToken();
 
     @Test
     public void userWorkflowTest() {
 
-        // STEP 1 - Create User
-        User createUser = new User("Kanchan", "QA");
+        // Create User
+        User createUser = new User(
+                "Kanchan",
+                "Sali",
+                29
+        );
 
         Response createResponse =
-                UserApi.createUser(createUser);
+                UserApi.createUser(token,createUser);
+
+        createResponse.prettyPrint();
 
         Assert.assertEquals(createResponse.statusCode(), 201);
 
-        ResponsePojo createdUser =
-                createResponse.as(ResponsePojo.class);
+        // DummyJSON doesn't actually create a database record.
+        int userId = 1;
 
-        String userId = "2";
-
-        System.out.println("Using existing User Id : " + userId);
-
-        Assert.assertNotNull(userId);
-
-        // STEP 2 - Update User
-
-        User updateUser = new User("Kanchan", "Senior QA");
+        // Update User
+        User updateUser = new User(
+                "Kanchan",
+                "Patil",
+                30
+        );
 
         Response updateResponse =
-                UserApi.updateUser(userId, updateUser);
+                UserApi.updateUser(token,userId,updateUser);
+
+        updateResponse.prettyPrint();
 
         Assert.assertEquals(updateResponse.statusCode(), 200);
 
-        ResponsePojo updatedUser =
-                updateResponse.as(ResponsePojo.class);
-
-        Assert.assertEquals(updatedUser.getJob(), "Senior QA");
-
-        // STEP 3 - Patch User
-
+        // Patch User
         User patchUser = new User();
-        patchUser.setJob("Automation Lead");
+        patchUser.setFirstName("Kanchan Updated");
+
+
 
         Response patchResponse =
-                UserApi.patchUser(userId, patchUser);
+                UserApi.patchUser(token, userId,patchUser);
+
+        patchResponse.prettyPrint();
 
         Assert.assertEquals(patchResponse.statusCode(), 200);
 
-        // STEP 4 - Delete User
+        // Delete User
 
         Response deleteResponse =
-                UserApi.deleteUser(userId);
+                UserApi.deleteUser(token, userId);
+
+        deleteResponse.prettyPrint();
 
         Assert.assertEquals(deleteResponse.statusCode(), 200);
-
     }
 }

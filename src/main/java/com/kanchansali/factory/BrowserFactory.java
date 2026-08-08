@@ -1,40 +1,32 @@
 package com.kanchansali.factory;
 
-import com.kanchansali.config.ConfigReader;
 import com.microsoft.playwright.*;
 
 public class BrowserFactory {
 
-    public static Browser createBrowser(Playwright playwright) {
+    public static Playwright playwright;
+    public static Browser browser;
+    public static BrowserContext context;
+    public static Page page;
 
-        String browserName = ConfigReader.get("browser");
 
-        boolean headless =
-                Boolean.parseBoolean(ConfigReader.get("headless"));
+    public static Page initBrowser(){
 
-        BrowserType.LaunchOptions options =
+        playwright = Playwright.create();
+
+        browser = playwright.chromium().launch(
                 new BrowserType.LaunchOptions()
-                        .setHeadless(headless);
+                        .setHeadless(false)
+                        .setSlowMo(100)
+        );
 
 
-        switch (browserName.toLowerCase()) {
+        context = browser.newContext();
 
-            case "firefox":
-                return playwright.firefox().launch(options);
+        page = context.newPage();
 
-            case "edge":
-                return playwright.chromium().launch(
-                        options.setChannel("edge"));
+        page.setDefaultTimeout(30000);
 
-            default:
-                return playwright.chromium().launch(options);
-
-        }
-
-
-
+        return page;
     }
-
-
-
 }

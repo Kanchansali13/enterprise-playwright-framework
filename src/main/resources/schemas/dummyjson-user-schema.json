@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "id",
+    "firstName",
+    "lastName",
+    "username",
+    "email",
+    "phone",
+    "address",
+    "company"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "object",
+      "required": [
+        "address",
+        "city",
+        "state",
+        "stateCode",
+        "postalCode",
+        "coordinates",
+        "country"
+      ],
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "stateCode": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "coordinates": {
+          "type": "object",
+          "required": [
+            "lat",
+            "lng"
+          ],
+          "properties": {
+            "lat": {
+              "type": "number"
+            },
+            "lng": {
+              "type": "number"
+            }
+          }
+        },
+        "country": {
+          "type": "string"
+        }
+      }
+    },
+    "company": {
+      "type": "object",
+      "required": [
+        "department",
+        "name",
+        "title",
+        "address"
+      ],
+      "properties": {
+        "department": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "address": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

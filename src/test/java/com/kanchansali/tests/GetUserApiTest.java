@@ -3,7 +3,6 @@ package com.kanchansali.tests;
 import com.kanchansali.api.ApiClient;
 import com.kanchansali.api.Endpoints;
 import com.kanchansali.specifications.RequestSpecs;
-import com.kanchansali.specifications.ResponseSpecs;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;

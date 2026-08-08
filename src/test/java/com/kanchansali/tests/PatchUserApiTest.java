@@ -1,36 +1,29 @@
 package com.kanchansali.tests;
 
 import com.kanchansali.api.UserApi;
-import com.kanchansali.models.ResponsePojo;
 import com.kanchansali.models.User;
+import com.kanchansali.utils.TokenManager;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class PatchUserApiTest extends BaseApiTest {
 
     @Test
-    public void patchUserTest(){
+    public void patchUserTest() {
 
-        Map<String,String> requestBody = new HashMap<>();
+        User user = new User();
 
-        requestBody.put("name","Kanchan");
-        requestBody.put("job","SDET");
+        user.setFirstName("Kanchan");
+        user.setLastName("Sali");
 
+        String token = TokenManager.getToken();
 
         Response response =
-                UserApi.patchUser("2", new User());
-
+                UserApi.patchUser(token,2, user);
 
         response.prettyPrint();
 
-
-        Assert.assertEquals(
-                response.getStatusCode(),
-                200
-        );
+        Assert.assertEquals(response.getStatusCode(), 200);
     }
 }

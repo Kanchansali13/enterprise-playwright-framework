@@ -1,9 +1,11 @@
 package com.kanchansali.tests;
 
+import com.kanchansali.api.Endpoints;
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 public class ValidatedUserSchemaTest {
@@ -11,14 +13,16 @@ public class ValidatedUserSchemaTest {
     @Test
     public void validateUserSchema() {
 
-        Response response =
-                given()
-                        .when()
-                        .get("https://jsonplaceholder.typicode.com/users/1");
+        Response response = RestAssured
+                .given()
+                .baseUri(Endpoints.JSONPLACEHOLDER_BASE)
+                .when()
+                .get(Endpoints.USERS + "/1");
 
-        response
-                .then()
+        Assert.assertEquals(response.statusCode(), 200);
+
+        response.then()
                 .assertThat()
-                .body(matchesJsonSchemaInClasspath("schemas/user-schema.json"));
+                .body(matchesJsonSchemaInClasspath("schemas/jsonplaceholder-user-schema.json"));
     }
 }
