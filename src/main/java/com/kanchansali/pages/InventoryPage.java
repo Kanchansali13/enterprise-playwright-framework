@@ -13,7 +13,8 @@ public class InventoryPage {
 
     // Verify Inventory page is displayed
     public boolean isInventoryDisplayed() {
-        return page.locator(".title")
+
+        return page.locator("[data-test='inventory-container']")
                 .isVisible();
     }
 

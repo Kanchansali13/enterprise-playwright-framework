@@ -1,0 +1,1 @@
+{"uuid":"06da7675-c8b8-492c-95ad-6e10778cd39f","name":"com.kanchansali.tests.PatchUserApiTest","children":["80804443-1256-4dcf-ac35-44d243a6ee01"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1786260426745,"stop":1786260426745}],"afters":[],"start":1786260387904,"stop":1786260468551}

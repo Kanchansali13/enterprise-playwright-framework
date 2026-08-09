@@ -1,0 +1,1 @@
+{"uuid":"7fc3c7de-b1be-45c2-8521-5538dca5b5f3","name":"com.kanchansali.tests.DeleteUserApiTest","children":["aae0ef86-26ec-4de8-b262-428a1b6893db"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1786260003915,"stop":1786260003917}],"afters":[],"start":1786259976619,"stop":1786260026216}

@@ -1,6 +1,8 @@
 package com.kanchansali.pages;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.WaitForSelectorState;
 import com.microsoft.playwright.options.WaitUntilState;
 
 public class LoginPage {
@@ -12,10 +14,18 @@ public class LoginPage {
     }
 
     public void open() {
+
         page.navigate(
                 "https://www.saucedemo.com/",
                 new Page.NavigateOptions()
-                        .setWaitUntil(WaitUntilState.DOMCONTENTLOADED)
+                        .setWaitUntil(WaitUntilState.COMMIT)
+                        .setTimeout(30000)
+        );
+
+        page.locator("#user-name").waitFor(
+                new Locator.WaitForOptions()
+                        .setState(WaitForSelectorState.VISIBLE)
+                        .setTimeout(30000)
         );
     }
 
@@ -30,5 +40,9 @@ public class LoginPage {
 
     public boolean isErrorDisplayed() {
         return page.locator("[data-test='error']").isVisible();
+    }
+
+    public String getErrorMessage() {
+        return page.locator("[data-test='error']").textContent();
     }
 }
