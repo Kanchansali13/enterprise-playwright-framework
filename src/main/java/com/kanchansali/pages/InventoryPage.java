@@ -1,57 +1,65 @@
 package com.kanchansali.pages;
 
-import com.kanchansali.constants.InventoryPageLocators;
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
-public class InventoryPage extends BasePage {
+public class InventoryPage {
+
+    private final Page page;
 
     public InventoryPage(Page page) {
-
-        super(page);
-
+        this.page = page;
     }
 
+    // Verify Inventory page is displayed
     public boolean isInventoryDisplayed() {
-
-        return locator(InventoryPageLocators.PAGE_TITLE)
-                .textContent()
-                .equals("Products");
-
+        return page.locator(".title")
+                .isVisible();
     }
 
+    // Get page title
+    public String getPageTitle() {
+        return page.locator(".title")
+                .innerText();
+    }
+
+    // Get number of products
     public int getProductCount() {
-
-        return locator(InventoryPageLocators.INVENTORY_ITEMS).count();
-
+        return page.locator(".inventory_item")
+                .count();
     }
 
+    // Add product to cart
     public void addProduct(String productName) {
 
-        String locator = String.format(
-                "//div[text()='%s']/ancestor::div[@class='inventory_item']//button",
-                productName);
-
-        click(locator);
-
+        page.locator(".inventory_item")
+                .filter(new Locator.FilterOptions()
+                        .setHasText(productName))
+                .locator("button")
+                .click();
     }
 
-    public int getCartCount() {
-
-        if(locator(InventoryPageLocators.CART_BADGE).count()==0)
-
-            return 0;
-
-        String cartCount = locator(InventoryPageLocators.CART_BADGE).textContent();
-        return Integer.parseInt(cartCount.trim());
-
+    // Keep this method too for compatibility with our earlier test
+    public void addProductToCart(String productName) {
+        addProduct(productName);
     }
 
+    // Get cart item count
+    public int getCartItemCount() {
+
+        String count =
+                page.locator(".shopping_cart_badge")
+                        .innerText();
+
+        return Integer.parseInt(count);
+    }
+
+    // Open cart and return CartPage
     public CartPage openCart() {
 
-        click(InventoryPageLocators.CART_BUTTON);
+        page.locator(".shopping_cart_link")
+                .click();
 
         return new CartPage(page);
-
     }
-
 }

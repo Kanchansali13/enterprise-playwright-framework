@@ -10,11 +10,17 @@ import org.testng.annotations.Test;
 public class LoginTest extends BaseTest {
 
     @Test(dataProvider = "loginData", dataProviderClass = LoginDataProvider.class)
+
     public void loginTest(String username,
                           String password,
                           String expected) {
 
-        LoginPage loginPage = new LoginPage(page);
+        System.out.println(
+                "LoginTest running on thread: "
+                        + Thread.currentThread().getId()
+        );
+
+
 
         loginPage.open();
 
@@ -36,8 +42,4 @@ public class LoginTest extends BaseTest {
         }
     }
 
-    @Test(groups = {"smoke", "ui"})
-    public void validLoginTest() {
-
-    }
 }

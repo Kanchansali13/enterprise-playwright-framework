@@ -1,54 +1,59 @@
 package com.kanchansali.base;
 
-import com.kanchansali.data.TestData;
+import com.kanchansali.driver.PlaywrightManager;
 import com.kanchansali.pages.InventoryPage;
 import com.kanchansali.pages.LoginPage;
-import com.microsoft.playwright.*;
+import com.microsoft.playwright.Page;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
-    protected Playwright playwright;
-    protected Browser browser;
-    protected BrowserContext context;
-    public static Page page;
+    protected Page page;
+    protected LoginPage loginPage;
+    protected InventoryPage inventoryPage;
 
-    @BeforeMethod
+    public Page getPage() {
+        return page;
+    }
+
+    @BeforeMethod(alwaysRun = true)
     public void setUp() {
 
-        playwright = Playwright.create();
-
-        browser = playwright.chromium().launch(
-                new BrowserType.LaunchOptions()
-                        .setHeadless(false)
+        System.out.println(
+                "SETUP - Test: "
+                        + getClass().getSimpleName()
+                        + " | Thread: "
+                        + Thread.currentThread().getId()
         );
 
-        context = browser.newContext();
+        PlaywrightManager.init();
 
-        page = context.newPage();
+        page = PlaywrightManager.getPage();
+
+        loginPage = new LoginPage(page);
+
+        System.out.println(
+                "PAGE CREATED - Thread: "
+                        + Thread.currentThread().getId()
+        );
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
 
-        page.close();
+        System.out.println(
+                "TEARDOWN - Test: "
+                        + getClass().getSimpleName()
+                        + " | Thread: "
+                        + Thread.currentThread().getId()
+        );
 
-        context.close();
+        PlaywrightManager.close();
 
-        browser.close();
-
-        playwright.close();
-    }
-
-    protected InventoryPage login() {
-
-        LoginPage loginPage = new LoginPage(page);
-
-        loginPage.open();
-
-        return loginPage.login(
-                TestData.USERNAME,
-                TestData.PASSWORD);
+        System.out.println(
+                "PLAYWRIGHT CLOSE - Thread: "
+                        + Thread.currentThread().getId()
+        );
     }
 }

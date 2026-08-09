@@ -1,69 +1,56 @@
 package com.kanchansali.tests;
 
 import com.kanchansali.base.BaseTest;
+import com.kanchansali.config.ConfigReader;
 import com.kanchansali.pages.InventoryPage;
 import com.kanchansali.pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
 public class InventoryTest extends BaseTest {
 
     @Test
-
-    public void verifyInventoryCount() {
-
-        LoginPage loginPage = new LoginPage(page);
-
-        loginPage.open();
-
-        InventoryPage inventoryPage = loginPage.login("standard_user","secret_sauce");
-
-        Assert.assertEquals(inventoryPage.getProductCount(), 6);
-
-    }
-
-    @Test
-
-    public void addSingleProduct() {
+    public void verifyInventoryPage() {
 
         LoginPage loginPage = new LoginPage(page);
 
         loginPage.open();
 
         InventoryPage inventoryPage =
-
-                loginPage.login("standard_user","secret_sauce");
-
-        inventoryPage.addProduct("Sauce Labs Backpack");
-
-        Assert.assertEquals(inventoryPage.getCartCount(), 1);
-
-    }
-
-    @Test
-
-    public void addMultipleProducts() {
-
-        LoginPage loginPage = new LoginPage(page);
-
-        loginPage.open();
-
-        InventoryPage inventoryPage =
-
-                loginPage.login("standard_user","secret_sauce");
-
-        inventoryPage.addProduct("Sauce Labs Backpack");
-
-        inventoryPage.addProduct("Sauce Labs Bike Light");
-
-        inventoryPage.addProduct("Sauce Labs Bolt T-Shirt");
+                loginPage.login(
+                        ConfigReader.get("username"),
+                        ConfigReader.get("password")
+                );
 
         Assert.assertEquals(
+                inventoryPage.getPageTitle(),
+                "Products"
+        );
 
-                inventoryPage.getCartCount(),
+        Assert.assertEquals(
+                inventoryPage.getProductCount(),
+                6
+        );
+    }
 
-                3);
+    @Test
+    public void addProductToCart() {
 
+        LoginPage loginPage = new LoginPage(page);
+
+        loginPage.open();
+
+        InventoryPage inventoryPage =
+                loginPage.login(
+                        ConfigReader.get("username"),
+                        ConfigReader.get("password")
+                );
+
+        inventoryPage.addProductToCart("Sauce Labs Backpack");
+
+        Assert.assertEquals(
+                inventoryPage.getCartItemCount(),
+                1
+        );
     }
 }

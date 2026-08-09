@@ -10,23 +10,22 @@ import java.util.Map;
 
 public class DatabaseTest {
 
-    @Test (priority = 1)
+    @Test
     public void databaseConnectionTest() {
 
         Connection connection = DatabaseManager.getConnection();
 
         System.out.println(connection);
-
     }
 
-    @Test(priority = 2)
+
+    @Test(dependsOnMethods = "databaseConnectionTest")
     public void readUsersFromDatabase() {
 
         DatabaseUtils.executeQuery("SELECT * FROM users");
-
     }
 
-    @Test(priority = 3)
+    @Test(dependsOnMethods = "readUsersFromDatabase")
     public void verifySingleUser() {
 
         String city = DatabaseUtils.getSingleValue(
@@ -37,19 +36,19 @@ public class DatabaseTest {
                 "SELECT email FROM users WHERE name='Kanchan'",
                 "email");
 
-
         System.out.println("City = " + city);
-        System.out.println("Email = "+email);
+        System.out.println("Email = " + email);
 
         Assert.assertEquals(city, "Pune");
         Assert.assertEquals(email, "kanchan@test.com");
     }
 
-    @Test(priority = 4)
+    @Test(dependsOnMethods = "verifySingleUser")
     public void verifyUserDetails() {
 
-        Map<String, String> user = DatabaseUtils.getRow(
-                "SELECT * FROM users WHERE id = 1");
+        Map<String, String> user =
+                DatabaseUtils.getRow(
+                        "SELECT * FROM users WHERE id = 1");
 
         Assert.assertEquals(user.get("name"), "Kanchan");
         Assert.assertEquals(user.get("email"), "kanchan@test.com");
@@ -58,19 +57,19 @@ public class DatabaseTest {
         System.out.println(user);
     }
 
-    @Test(priority = 5)
+    @Test(dependsOnMethods = "verifyUserDetails")
     public void insertUserIntoDatabase() {
 
         int rows = DatabaseUtils.executeUpdate(
-                "INSERT INTO users(name,email,city) VALUES ('Priya','priya@test.com','Bangalore')");
+                "INSERT INTO users(name,email,city) " +
+                        "VALUES ('Priya','priya@test.com','Bangalore')");
 
         Assert.assertEquals(rows, 1);
 
         System.out.println("Rows Inserted : " + rows);
-
     }
 
-    @Test(priority = 6)
+    @Test(dependsOnMethods = "insertUserIntoDatabase")
     public void verifyInsertedUser() {
 
         Map<String, String> user =
@@ -79,27 +78,27 @@ public class DatabaseTest {
 
         Assert.assertEquals(user.get("city"), "Bangalore");
         Assert.assertEquals(user.get("email"), "priya@test.com");
-
     }
 
-    @Test(priority = 7)
+    @Test(dependsOnMethods = "verifyInsertedUser")
     public void updateUserInDatabase() {
 
         int rows = DatabaseUtils.executeUpdate(
-                "UPDATE users SET city='Hyderabad' WHERE email='priya@test.com'");
+                "UPDATE users SET city='Hyderabad' " +
+                        "WHERE email='priya@test.com'");
 
         Assert.assertEquals(rows, 1);
 
         Map<String, String> user =
                 DatabaseUtils.getRow(
-                        "SELECT * FROM users WHERE name='Priya'");
-
-        Assert.assertEquals(user.get("city"), "Hyderabad");
+                        "SELECT * FROM users WHERE email='priya@test.com'");
 
         System.out.println(user);
+
+        Assert.assertEquals(user.get("city"), "Hyderabad");
     }
 
-    @Test(priority = 8)
+    @Test(dependsOnMethods = "updateUserInDatabase")
     public void deleteUserFromDatabase() {
 
         int rows = DatabaseUtils.executeUpdate(
@@ -113,5 +112,4 @@ public class DatabaseTest {
 
         Assert.assertNull(city);
     }
-
 }

@@ -1,57 +1,34 @@
 package com.kanchansali.pages;
-import org.apache.logging.log4j.Logger;
-import com.kanchansali.utils.LoggerUtil;
 
-import com.kanchansali.config.ConfigReader;
-import com.kanchansali.constants.LoginPageLocators;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.WaitUntilState;
 
-public class LoginPage extends BasePage {
+public class LoginPage {
 
-    private static final Logger logger =
-            LoggerUtil.getLogger(LoginPage.class);
-
-
+    private final Page page;
 
     public LoginPage(Page page) {
-        super(page);
+        this.page = page;
     }
 
     public void open() {
-
-        logger.info("Opening Login Page");
-
-        page.navigate(ConfigReader.get("base.url"));
+        page.navigate(
+                "https://www.saucedemo.com/",
+                new Page.NavigateOptions()
+                        .setWaitUntil(WaitUntilState.DOMCONTENTLOADED)
+        );
     }
 
     public InventoryPage login(String username, String password) {
 
-        logger.info("Entering username");
-
-        type(LoginPageLocators.USERNAME, username);
-
-        logger.info("Entering password");
-
-        type(LoginPageLocators.PASSWORD, password);
-
-        logger.info("Clicking Login button");
-
-        click(LoginPageLocators.LOGIN_BUTTON);
-
-        logger.info("Login request submitted");
+        page.locator("#user-name").fill(username);
+        page.locator("#password").fill(password);
+        page.locator("#login-button").click();
 
         return new InventoryPage(page);
     }
 
-    public String getErrorMessage() {
-
-        return locator(LoginPageLocators.ERROR_MESSAGE).textContent();
-
-    }
-
     public boolean isErrorDisplayed() {
-
-        return locator(LoginPageLocators.ERROR_MESSAGE).isVisible();
-
+        return page.locator("[data-test='error']").isVisible();
     }
 }
