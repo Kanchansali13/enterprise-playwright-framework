@@ -3,6 +3,7 @@ package com.kanchansali.listeners;
 import com.kanchansali.base.BaseTest;
 import com.kanchansali.utils.LoggerUtil;
 import com.microsoft.playwright.Page;
+import io.qameta.allure.Attachment;
 import org.apache.logging.log4j.Logger;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -31,21 +32,36 @@ public class TestListener implements ITestListener {
 
             Page page = baseTest.getPage();
 
-            if (page != null) {
+            if (page != null && !page.isClosed()) {
 
-                String screenshotPath =
-                        "target/screenshots/" + result.getName() + ".png";
+                try {
 
-                page.screenshot(
-                        new Page.ScreenshotOptions()
-                                .setPath(Paths.get(screenshotPath))
-                                .setFullPage(true)
-                );
+                    String screenshotPath =
+                            "target/screenshots/"
+                                    + result.getName()
+                                    + ".png";
 
-                logger.info(
-                        "Screenshot captured: {}",
-                        screenshotPath
-                );
+                    byte[] screenshot =
+                            page.screenshot(
+                                    new Page.ScreenshotOptions()
+                                            .setPath(Paths.get(screenshotPath))
+                                            .setFullPage(true)
+                            );
+
+                    attachScreenshot(screenshot);
+
+                    logger.info(
+                            "Screenshot captured: {}",
+                            screenshotPath
+                    );
+
+                } catch (Exception e) {
+
+                    logger.error(
+                            "Failed to capture screenshot",
+                            e
+                    );
+                }
             }
         }
     }
@@ -54,5 +70,14 @@ public class TestListener implements ITestListener {
     public void onTestSkipped(ITestResult result) {
 
         logger.warn("SKIPPED : {}", result.getName());
+    }
+
+    @Attachment(
+            value = "Failure Screenshot",
+            type = "image/png"
+    )
+    public byte[] attachScreenshot(byte[] screenshot) {
+
+        return screenshot;
     }
 }

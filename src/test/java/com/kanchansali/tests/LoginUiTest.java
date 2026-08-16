@@ -1,6 +1,7 @@
 package com.kanchansali.tests;
 
 import com.kanchansali.base.BaseTest;
+import com.kanchansali.config.ConfigReader;
 import com.kanchansali.pages.InventoryPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -8,19 +9,19 @@ import org.testng.annotations.Test;
 public class LoginUiTest extends BaseTest {
 
     @Test
-    public void verifySuccessfulLogin() {
+    public void validLoginTest() {
 
-        loginPage.open();
+        getLoginPage().open();
 
         InventoryPage inventoryPage =
-                loginPage.login(
-                        "standard_user",
-                        "secret_sauce"
+                getLoginPage().login(
+                        ConfigReader.get("username"),
+                        ConfigReader.get("password")
                 );
 
         Assert.assertTrue(
                 inventoryPage.isInventoryDisplayed(),
-                "User was not redirected to the Inventory page after login"
+                "Inventory page should be displayed after successful login"
         );
     }
 }

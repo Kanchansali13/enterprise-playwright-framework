@@ -1,1 +1,0 @@
-{"uuid":"5dc1f194-f85a-4ec9-843a-4e164fe17f4f","name":"com.kanchansali.tests.LoginApiTest","children":["024d1b03-0930-441a-a7ca-c3d7ea75f140"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1786182880308,"stop":1786182880308}],"afters":[],"start":1786182816928,"stop":1786182899223}

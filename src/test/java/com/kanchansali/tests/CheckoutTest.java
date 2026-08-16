@@ -9,12 +9,10 @@ public class CheckoutTest extends BaseTest {
     @Test
     public void completePurchase() {
 
-        LoginPage loginPage = new LoginPage(page);
-
-        loginPage.open();
+        getLoginPage().open();
 
         InventoryPage inventoryPage =
-                loginPage.login("standard_user","secret_sauce");
+                getLoginPage().login("standard_user","secret_sauce");
 
         inventoryPage.addProduct("Sauce Labs Backpack");
 

@@ -1,45 +1,42 @@
 package com.kanchansali.tests;
 
 import com.kanchansali.base.BaseTest;
-import dataproviders.LoginDataProvider;
+import com.kanchansali.config.ConfigReader;
 import com.kanchansali.pages.InventoryPage;
-import com.kanchansali.pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-    @Test(dataProvider = "loginData", dataProviderClass = LoginDataProvider.class)
+    @Test
+    public void validLogin() {
 
-    public void loginTest(String username,
-                          String password,
-                          String expected) {
-
-        System.out.println(
-                "LoginTest running on thread: "
-                        + Thread.currentThread().getId()
-        );
-
-
-
-        loginPage.open();
+        getLoginPage().open();
 
         InventoryPage inventoryPage =
-                loginPage.login(username, password);
+                getLoginPage().login(
+                        ConfigReader.get("username"),
+                        ConfigReader.get("password")
+                );
 
-        if (expected.equalsIgnoreCase("PASS")) {
-
-            Assert.assertTrue(
-                    inventoryPage.isInventoryDisplayed(),
-                    "Login should be successful");
-
-        } else {
-
-            Assert.assertTrue(
-                    loginPage.isErrorDisplayed(),
-                    "Error message should be displayed");
-
-        }
+        Assert.assertTrue(
+                inventoryPage.isInventoryDisplayed()
+        );
     }
 
+    @Test
+    public void invalidLogin() {
+
+        getLoginPage().open();
+
+        getLoginPage().login(
+                "invalid_user",
+                "invalid_password"
+        );
+
+        Assert.assertTrue(
+                getLoginPage().isErrorDisplayed(),
+                "Error message should be displayed"
+        );
+    }
 }

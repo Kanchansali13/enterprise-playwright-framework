@@ -9,12 +9,16 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
-    protected Page page;
-    protected LoginPage loginPage;
-    protected InventoryPage inventoryPage;
+    protected ThreadLocal<Page> page = new ThreadLocal<>();
+    protected ThreadLocal<LoginPage> loginPage = new ThreadLocal<>();
+    protected ThreadLocal<InventoryPage> inventoryPage = new ThreadLocal<>();
 
     public Page getPage() {
-        return page;
+        return page.get();
+    }
+
+    public LoginPage getLoginPage() {
+        return loginPage.get();
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -29,14 +33,12 @@ public class BaseTest {
                         + threadId
         );
 
-        // Create Playwright instance for this thread
         PlaywrightManager.init();
 
-        // Get Page belonging to this thread
-        page = PlaywrightManager.getPage();
+        Page currentPage = PlaywrightManager.getPage();
 
-        // Initialize page objects using this thread's Page
-        loginPage = new LoginPage(page);
+        page.set(currentPage);
+        loginPage.set(new LoginPage(currentPage));
 
         System.out.println(
                 "PAGE CREATED - Thread: " + threadId
@@ -55,16 +57,17 @@ public class BaseTest {
                         + threadId
         );
 
-        // Close Playwright resources belonging to this thread
-        PlaywrightManager.close();
+        try {
+            PlaywrightManager.close();
+        } finally {
 
-        // Clear test-level references
-        page = null;
-        loginPage = null;
-        inventoryPage = null;
+            page.remove();
+            loginPage.remove();
+            inventoryPage.remove();
 
-        System.out.println(
-                "PLAYWRIGHT CLOSE - Thread: " + threadId
-        );
+            System.out.println(
+                    "PLAYWRIGHT CLOSE - Thread: " + threadId
+            );
+        }
     }
 }

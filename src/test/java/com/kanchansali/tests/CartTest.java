@@ -1,6 +1,7 @@
 package com.kanchansali.tests;
 
 import com.kanchansali.base.BaseTest;
+import com.kanchansali.config.ConfigReader;
 import com.kanchansali.pages.CartPage;
 import com.kanchansali.pages.CheckoutPage;
 import com.kanchansali.pages.InventoryPage;
@@ -13,7 +14,7 @@ public class CartTest extends BaseTest {
     @Test
     public void verifyProductAddedToCart() {
 
-        LoginPage loginPage = new LoginPage(page);
+        LoginPage loginPage = getLoginPage();
 
         loginPage.open();
 
@@ -29,7 +30,7 @@ public class CartTest extends BaseTest {
     @Test
     public void verifyCartItemCount() {
 
-        LoginPage loginPage = new LoginPage(page);
+        LoginPage loginPage = getLoginPage();
 
         loginPage.open();
 
@@ -48,7 +49,7 @@ public class CartTest extends BaseTest {
     @Test
     public void removeProductFromCart() {
 
-        LoginPage loginPage = new LoginPage(page);
+        LoginPage loginPage = getLoginPage();
 
         loginPage.open();
 
@@ -67,12 +68,13 @@ public class CartTest extends BaseTest {
     @Test
     public void verifyCheckoutNavigation() {
 
-        LoginPage loginPage = new LoginPage(page);
-
-        loginPage.open();
+        getLoginPage().open();
 
         InventoryPage inventoryPage =
-                loginPage.login("standard_user", "secret_sauce");
+                getLoginPage().login(
+                        ConfigReader.get("username"),
+                        ConfigReader.get("password")
+                );
 
         inventoryPage.addProduct("Sauce Labs Backpack");
 

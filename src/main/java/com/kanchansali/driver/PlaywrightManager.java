@@ -113,49 +113,38 @@ public class PlaywrightManager {
 
         try {
 
-            Page pg = page.get();
+            BrowserContext ctx = context.get();
 
-            if (pg != null && !pg.isClosed()) {
-                pg.close();
+            if (ctx != null) {
+                ctx.close();
             }
 
         } finally {
 
             try {
 
-                BrowserContext ctx = context.get();
+                Browser br = browser.get();
 
-                if (ctx != null) {
-                    ctx.close();
+                if (br != null) {
+                    br.close();
                 }
 
             } finally {
 
                 try {
 
-                    Browser br = browser.get();
+                    Playwright pw = playwright.get();
 
-                    if (br != null) {
-                        br.close();
+                    if (pw != null) {
+                        pw.close();
                     }
 
                 } finally {
 
-                    try {
-
-                        Playwright pw = playwright.get();
-
-                        if (pw != null) {
-                            pw.close();
-                        }
-
-                    } finally {
-
-                        page.remove();
-                        context.remove();
-                        browser.remove();
-                        playwright.remove();
-                    }
+                    page.remove();
+                    context.remove();
+                    browser.remove();
+                    playwright.remove();
                 }
             }
         }

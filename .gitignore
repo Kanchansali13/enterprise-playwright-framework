@@ -37,3 +37,39 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+
+# Maven
+target/
+
+# Allure
+allure-results/
+allure-report/
+
+# IDE
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# OS
+Thumbs.db
+
+# Logs
+*.log
+
+# Build output
+
+# Allure
+.allure/
+
+# Logs
+logs/
+
+# Screenshots
+screenshots/
+
+# IDE

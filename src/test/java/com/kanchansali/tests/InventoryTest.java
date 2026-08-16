@@ -12,12 +12,10 @@ public class InventoryTest extends BaseTest {
     @Test
     public void verifyInventoryPage() {
 
-        LoginPage loginPage = new LoginPage(page);
-
-        loginPage.open();
+        getLoginPage().open();
 
         InventoryPage inventoryPage =
-                loginPage.login(
+                getLoginPage().login(
                         ConfigReader.get("username"),
                         ConfigReader.get("password")
                 );
@@ -36,7 +34,7 @@ public class InventoryTest extends BaseTest {
     @Test
     public void addProductToCart() {
 
-        LoginPage loginPage = new LoginPage(page);
+        LoginPage loginPage = getLoginPage();
 
         loginPage.open();
 
