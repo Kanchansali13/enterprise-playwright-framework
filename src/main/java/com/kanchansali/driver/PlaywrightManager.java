@@ -20,21 +20,16 @@ public class PlaywrightManager {
     private PlaywrightManager() {
     }
 
-    public static void init() {
+    /**
+     * Initialize Playwright and Browser once per TestNG thread.
+     */
+    private static void initializeBrowser() {
 
         long threadId = Thread.currentThread().getId();
 
         System.out.println(
-                "PLAYWRIGHT INIT - Thread: " + threadId
+                "BROWSER INIT - Thread: " + threadId
         );
-
-        // Prevent accidental double initialization
-        if (page.get() != null) {
-            System.out.println(
-                    "PLAYWRIGHT ALREADY INITIALIZED - Thread: " + threadId
-            );
-            return;
-        }
 
         Playwright pw = Playwright.create();
         playwright.set(pw);
@@ -74,10 +69,45 @@ public class PlaywrightManager {
 
         browser.set(br);
 
+        System.out.println(
+                "BROWSER CREATED - Thread: " + threadId
+        );
+    }
+
+    /**
+     * Create a new isolated BrowserContext and Page
+     * for every test method.
+     */
+    public static void init() {
+
+        long threadId = Thread.currentThread().getId();
+
+        System.out.println(
+                "PLAYWRIGHT INIT - Thread: " + threadId
+        );
+
+        // Create Playwright + Browser only once per thread
+        if (browser.get() == null) {
+            initializeBrowser();
+        }
+
+        // Safety check
+        if (page.get() != null) {
+            System.out.println(
+                    "PAGE ALREADY INITIALIZED - Thread: "
+                            + threadId
+            );
+            return;
+        }
+
+        Browser br = browser.get();
+
         BrowserContext ctx = br.newContext();
+
         context.set(ctx);
 
         Page pg = ctx.newPage();
+
         page.set(pg);
 
         pg.setDefaultTimeout(
@@ -94,6 +124,7 @@ public class PlaywrightManager {
         Page currentPage = page.get();
 
         if (currentPage == null) {
+
             throw new IllegalStateException(
                     "Page is not initialized for Thread: "
                             + Thread.currentThread().getId()
@@ -103,12 +134,16 @@ public class PlaywrightManager {
         return currentPage;
     }
 
+    /**
+     * Close only the Context + Page after each test.
+     * Browser and Playwright remain alive for the thread.
+     */
     public static void close() {
 
         long threadId = Thread.currentThread().getId();
 
         System.out.println(
-                "PLAYWRIGHT CLOSE - Thread: " + threadId
+                "TEST CLEANUP - Thread: " + threadId
         );
 
         try {
@@ -121,31 +156,48 @@ public class PlaywrightManager {
 
         } finally {
 
+            page.remove();
+            context.remove();
+
+            System.out.println(
+                    "CONTEXT CLOSED - Thread: " + threadId
+            );
+        }
+    }
+
+    /**
+     * Close Browser + Playwright when the thread is finished.
+     */
+    public static void shutdownThread() {
+
+        long threadId = Thread.currentThread().getId();
+
+        System.out.println(
+                "BROWSER SHUTDOWN - Thread: " + threadId
+        );
+
+        try {
+
+            Browser br = browser.get();
+
+            if (br != null) {
+                br.close();
+            }
+
+        } finally {
+
             try {
 
-                Browser br = browser.get();
+                Playwright pw = playwright.get();
 
-                if (br != null) {
-                    br.close();
+                if (pw != null) {
+                    pw.close();
                 }
 
             } finally {
 
-                try {
-
-                    Playwright pw = playwright.get();
-
-                    if (pw != null) {
-                        pw.close();
-                    }
-
-                } finally {
-
-                    page.remove();
-                    context.remove();
-                    browser.remove();
-                    playwright.remove();
-                }
+                browser.remove();
+                playwright.remove();
             }
         }
     }
