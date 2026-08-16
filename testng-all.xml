@@ -4,7 +4,7 @@
 
 <suite name="Enterprise Test Suite"
        parallel="methods"
-       thread-count="4">
+       thread-count="6">
 
     <test name="All Tests">
 
