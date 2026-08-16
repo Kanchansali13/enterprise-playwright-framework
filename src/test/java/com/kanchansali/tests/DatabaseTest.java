@@ -39,6 +39,8 @@ public class DatabaseTest {
         System.out.println("City = " + city);
         System.out.println("Email = " + email);
 
+        System.out.println("Newchane");
+
         Assert.assertEquals(city, "Pune");
         Assert.assertEquals(email, "kanchan@test.com");
     }
