@@ -34,6 +34,10 @@ pipeline {
     post {
         always {
             echo '===== BUILD COMPLETED ====='
+            allure([
+                includeProperties: false,
+                results: [[path: 'allure-results']]
+            ])
         }
 
         success {
@@ -43,25 +47,5 @@ pipeline {
         failure {
             echo '===== PLAYWRIGHT TESTS FAILED ====='
         }
-    }
-}
-
-post {
-    always {
-        echo '===== BUILD COMPLETED ====='
-
-        allure([
-            includeProperties: false,
-            jdk: '',
-            results: [[path: 'allure-results']]
-        ])
-    }
-
-    success {
-        echo '===== PLAYWRIGHT TESTS PASSED ====='
-    }
-
-    failure {
-        echo '===== PLAYWRIGHT TESTS FAILED ====='
     }
 }
